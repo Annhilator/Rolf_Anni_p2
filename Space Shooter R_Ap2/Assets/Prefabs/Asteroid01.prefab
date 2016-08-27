@@ -42,7 +42,7 @@ GameObject:
   - 114: {fileID: 114000012430960240}
   - 114: {fileID: 114000013158480194}
   m_Layer: 0
-  m_Name: Asteroid
+  m_Name: Asteroid01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
   playerExplosion: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
-  scoreValue: 8
+  scoreValue: 6
 --- !u!114 &114000012601635032
 MonoBehaviour:
   m_ObjectHideFlags: 1
