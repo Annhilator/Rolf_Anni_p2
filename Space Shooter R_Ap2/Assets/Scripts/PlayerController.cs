@@ -16,14 +16,12 @@ public class PlayerController : MonoBehaviour {
 	public Transform shotSpawn;
 	public float fireRate;
 	private float nextFire;
-	public int penalty;
 
 	void Update() {
 		if ((Input.GetButton ("Fire1") || Input.GetButton ("Jump")) && Time.time > nextFire) {
 			nextFire = Time.time + fireRate;
 			Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
 			GetComponent<AudioSource> () .Play();
-			GameController.FindGameController ().AddScore (-penalty);
 		}
 
 	}
