@@ -5,7 +5,7 @@ public class GameController : MonoBehaviour {
 
 	public GameObject[] hazards;
 	public Vector3 spawnValues;
-	public int hazardCount;
+	private int hazardCount;
 	public float spawnWait;
 	public float startWait;
 	public float waveWait;
@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour {
 	private bool restart;
 
 	void Start() {
+		hazardCount = 10;
 		gameOver = false;
 		restart = false;
 		restartText.text = "";
