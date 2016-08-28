@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour {
 		gameOver = false;
 		restart = false;
 		restartText.text = "";
-		gameOverText.text = "Asteroids incoming";
+		gameOverText.text = "Asteroids incoming El Capitano";
 		scoreText.text = "";
 		score = 0;
 
