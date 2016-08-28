@@ -14,6 +14,7 @@ GameObject:
   - 65: {fileID: 65000011004776998}
   - 114: {fileID: 114000013955609594}
   - 54: {fileID: 54000013365835412}
+  - 114: {fileID: 114000012607891930}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: PickUp
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 100302}
   m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
   m_LocalPosition: {x: 0.037, y: 0.636, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -125,6 +126,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.41493097, y: 0.116833374, z: 0.41493097}
   m_Center: {x: 0, y: 0.0000000055879354, z: 0}
+--- !u!114 &114000012607891930
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15bb6b09d977a044198fe25862e475d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tumble: 4
 --- !u!114 &114000013955609594
 MonoBehaviour:
   m_ObjectHideFlags: 1

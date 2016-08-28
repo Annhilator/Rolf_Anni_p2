@@ -14,6 +14,7 @@ GameObject:
   - 65: {fileID: 65000010187675206}
   - 114: {fileID: 114000011336491050}
   - 54: {fileID: 54000010923129298}
+  - 114: {fileID: 114000010890045766}
   m_Layer: 0
   m_Name: Medi
   m_TagString: PickUp
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 129756}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -125,6 +126,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.33478466, y: 0.2556897, z: 0.09504977}
   m_Center: {x: 0, y: 0, z: -0.0000000018626451}
+--- !u!114 &114000010890045766
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15bb6b09d977a044198fe25862e475d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tumble: 4
 --- !u!114 &114000011336491050
 MonoBehaviour:
   m_ObjectHideFlags: 1

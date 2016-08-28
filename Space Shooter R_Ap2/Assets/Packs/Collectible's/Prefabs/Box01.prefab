@@ -14,6 +14,7 @@ GameObject:
   - 65: {fileID: 65000013304904410}
   - 114: {fileID: 114000010107838890}
   - 54: {fileID: 54000011174034694}
+  - 114: {fileID: 114000012538759800}
   m_Layer: 0
   m_Name: Box01
   m_TagString: PickUp
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 179972}
   m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
   m_LocalPosition: {x: 2.108, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -137,3 +138,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -5
+--- !u!114 &114000012538759800
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15bb6b09d977a044198fe25862e475d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tumble: 4

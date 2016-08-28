@@ -14,6 +14,7 @@ GameObject:
   - 136: {fileID: 136000010391453266}
   - 114: {fileID: 114000012611239752}
   - 54: {fileID: 54000011451609560}
+  - 114: {fileID: 114000013558777930}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: PickUp
@@ -30,7 +31,7 @@ Transform:
   m_LocalRotation: {x: 0.000000021855694, y: -1.9106855e-15, z: -0.00000008742278,
     w: 1}
   m_LocalPosition: {x: 1.626, y: 0.636, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -126,6 +127,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -5
+--- !u!114 &114000013558777930
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 131672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15bb6b09d977a044198fe25862e475d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tumble: 4
 --- !u!136 &136000010391453266
 CapsuleCollider:
   m_ObjectHideFlags: 1
