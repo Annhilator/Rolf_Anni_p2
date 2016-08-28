@@ -32,7 +32,7 @@ public class GameController : MonoBehaviour {
 		scoreText.text = "";
 		score = 0;
 		pickUpCounter = 0;
-		nextPickUp = Random.Range (1, 2);
+		nextPickUp = Random.Range (5, 20);
 		StartCoroutine (SpawnWaves ());
 	}
 
@@ -62,8 +62,9 @@ public class GameController : MonoBehaviour {
 					Vector3 spawnPositionPickUp = new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
 					Quaternion spawnRotationPickUp = Quaternion.identity;
 					Instantiate (pickUp, spawnPositionPickUp, spawnRotationPickUp);
-					nextPickUp = Random.Range (1, 2);
+					nextPickUp = Random.Range (5, 20);
 					pickUpCounter = 0;
+					yield return new WaitForSeconds (0.25f);
 				}
 				GameObject hazard = hazards [Random.Range(0, hazards.Length)];
 				Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
