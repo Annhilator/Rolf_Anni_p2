@@ -3,8 +3,14 @@ using System.Collections;
 
 public class DestroyByBoundary : MonoBehaviour {
 
+	public int hazardPenalty;
+
 	void OnTriggerExit(Collider other) {
-		// Destroy everything that leaves the trigger
+		
+		if (other.CompareTag ("Hazard")) {
+			GameController.FindGameController ().AddScore (-hazardPenalty);
+			Debug.Log ("test");
+		}
 		Destroy(other.gameObject);
 	}
 }

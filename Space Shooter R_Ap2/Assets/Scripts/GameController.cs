@@ -17,12 +17,14 @@ public class GameController : MonoBehaviour {
 	private bool gameOver;
 	private bool restart;
 
+	private GameObject startScreen;
+
 	void Start() {
 		hazardCount = 10;
 		gameOver = false;
 		restart = false;
 		restartText.text = "";
-		gameOverText.text = "Asteroids incoming El Capitano";
+		gameOverText.text = "Asteroids incoming Captain!";
 		scoreText.text = "";
 		score = 0;
 
@@ -38,9 +40,11 @@ public class GameController : MonoBehaviour {
 	}
 
 	IEnumerator SpawnWaves() {
-		yield return new WaitForSeconds (startWait);
+		startScreen = GameObject.FindGameObjectWithTag ("StartScreen");
+		yield return new WaitForSeconds (startScreen.GetComponent<DestroyByTime> ().lifeTime);
 		UpdateScore ();
 		gameOverText.text = "";
+		yield return new WaitForSeconds (startWait);
 		while (true) {
 			for (int i = 0; i < hazardCount; i++) {
 				GameObject hazard = hazards [Random.Range(0, hazards.Length)];

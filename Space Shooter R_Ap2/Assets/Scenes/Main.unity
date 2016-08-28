@@ -2330,6 +2330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d91c1d1095bf27f4198a0e2b4dbd4faa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hazardPenalty: 50
 --- !u!65 &663739944
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2403,7 +2404,7 @@ MonoBehaviour:
   - {fileID: 1000014206925966, guid: 4a0fd75cd873c334a90cc63b93cff3c8, type: 2}
   spawnValues: {x: 6, y: 0, z: 16}
   spawnWait: 0.5
-  startWait: 6
+  startWait: 2.5
   waveWait: 4
   scoreText: {fileID: 513911065}
   restartText: {fileID: 263632855}

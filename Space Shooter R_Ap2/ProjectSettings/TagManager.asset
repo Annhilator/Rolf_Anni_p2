@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - StartScreen
+  - Boundary
+  - Hazard
   layers:
   - Default
   - TransparentFX
