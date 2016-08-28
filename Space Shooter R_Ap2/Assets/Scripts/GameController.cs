@@ -22,9 +22,10 @@ public class GameController : MonoBehaviour {
 		gameOver = false;
 		restart = false;
 		restartText.text = "";
-		gameOverText.text = "";
+		gameOverText.text = "Asteroids incoming";
+		scoreText.text = "";
 		score = 0;
-		UpdateScore ();
+
 		StartCoroutine (SpawnWaves ());
 	}
 
@@ -38,6 +39,8 @@ public class GameController : MonoBehaviour {
 
 	IEnumerator SpawnWaves() {
 		yield return new WaitForSeconds (startWait);
+		UpdateScore ();
+		gameOverText.text = "";
 		while (true) {
 			for (int i = 0; i < hazardCount; i++) {
 				GameObject hazard = hazards [Random.Range(0, hazards.Length)];
