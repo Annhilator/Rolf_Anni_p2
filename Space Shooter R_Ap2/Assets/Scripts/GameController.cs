@@ -37,6 +37,10 @@ public class GameController : MonoBehaviour {
 				Application.LoadLevel ("Menu");
 			}
 		}
+
+		if (score <= -150) {
+			GameOver ();
+		}
 	}
 
 	IEnumerator SpawnWaves() {

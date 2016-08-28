@@ -9,7 +9,6 @@ public class DestroyByBoundary : MonoBehaviour {
 		
 		if (other.CompareTag ("Hazard")) {
 			GameController.FindGameController ().AddScore (-hazardPenalty);
-			Debug.Log ("test");
 		}
 		Destroy(other.gameObject);
 	}
