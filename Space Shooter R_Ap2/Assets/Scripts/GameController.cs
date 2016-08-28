@@ -4,7 +4,7 @@ using System.Collections;
 public class GameController : MonoBehaviour {
 
 	public GameObject[] hazards;
-	public GameObject[] Pickups;
+	public GameObject[] pickUps;
 
 	public Vector3 spawnValues;
 	private int hazardCount;
@@ -15,6 +15,8 @@ public class GameController : MonoBehaviour {
 	public GUIText restartText;
 	public GUIText gameOverText;
 	private int score;
+	private int nextPickUp;
+	private int pickUpCounter;
 
 	private bool gameOver;
 	private bool restart;
@@ -29,7 +31,8 @@ public class GameController : MonoBehaviour {
 		gameOverText.text = "Asteroids incoming Captain!";
 		scoreText.text = "";
 		score = 0;
-
+		pickUpCounter = 0;
+		nextPickUp = Random.Range (1, 2);
 		StartCoroutine (SpawnWaves ());
 	}
 
@@ -53,7 +56,16 @@ public class GameController : MonoBehaviour {
 		yield return new WaitForSeconds (startWait);
 		while (true) {
 			for (int i = 0; i < hazardCount; i++) {
-				GameObject hazard = Pickups [Random.Range(0, Pickups.Length)];
+				pickUpCounter++;
+				if (pickUpCounter == nextPickUp) {
+					GameObject pickUp = pickUps [Random.Range(0, pickUps.Length)];
+					Vector3 spawnPositionPickUp = new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
+					Quaternion spawnRotationPickUp = Quaternion.identity;
+					Instantiate (pickUp, spawnPositionPickUp, spawnRotationPickUp);
+					nextPickUp = Random.Range (1, 2);
+					pickUpCounter = 0;
+				}
+				GameObject hazard = hazards [Random.Range(0, hazards.Length)];
 				Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
 				Quaternion spawnRotation = Quaternion.identity;
 				Instantiate (hazard, spawnPosition, spawnRotation);

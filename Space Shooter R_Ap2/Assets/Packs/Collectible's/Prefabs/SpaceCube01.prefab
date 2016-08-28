@@ -15,6 +15,7 @@ GameObject:
   - 114: {fileID: 114000012408294674}
   - 54: {fileID: 54000011067426634}
   - 114: {fileID: 114000011576046406}
+  - 114: {fileID: 114000013775666274}
   m_Layer: 0
   m_Name: SpaceCube01
   m_TagString: PickUp
@@ -31,7 +32,7 @@ Transform:
   m_LocalRotation: {x: 0.000000021855694, y: 0.00000008742278, z: -1.9106855e-15,
     w: 1}
   m_LocalPosition: {x: -0.477, y: 0.636, z: -0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -151,3 +152,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -5
+--- !u!114 &114000013775666274
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f53108fa98a5ab34ca1559f46741e6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buff: 
+  pickUpSound: {fileID: 82000013001123648, guid: d56711a156e29324b96844ddf3794beb,
+    type: 2}

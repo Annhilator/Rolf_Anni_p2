@@ -2404,7 +2404,7 @@ MonoBehaviour:
   - {fileID: 1000010773314068, guid: 59cd269b99126f641a29c69a0fc39244, type: 2}
   - {fileID: 1000011467496336, guid: f67c6e49cd55fc347ad711627f6d0a1b, type: 2}
   - {fileID: 1000014206925966, guid: 4a0fd75cd873c334a90cc63b93cff3c8, type: 2}
-  Pickups:
+  pickUps:
   - {fileID: 133292, guid: d2be0d31fcb0e19449dd735dd1bc93c4, type: 2}
   - {fileID: 195526, guid: 335cc041d52406b43ace028676883483, type: 2}
   - {fileID: 179972, guid: 096cbac307ca54e468f92aac2b2072ba, type: 2}
@@ -2424,7 +2424,7 @@ MonoBehaviour:
   - {fileID: 100302, guid: 050a915e007e54248b61183e7f3a2ae7, type: 2}
   spawnValues: {x: 6, y: 0, z: 16}
   spawnWait: 0.5
-  startWait: 2.5
+  startWait: 1
   waveWait: 4
   scoreText: {fileID: 513911065}
   restartText: {fileID: 263632855}
@@ -2504,7 +2504,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -2578,7 +2578,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -2731,7 +2731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5516cd77adcdab84ea5b63342546b829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 6
+  lifeTime: 1
 --- !u!1 &1474564408
 GameObject:
   m_ObjectHideFlags: 0
@@ -3003,7 +3003,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:

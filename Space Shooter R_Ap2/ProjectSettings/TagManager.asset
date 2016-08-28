@@ -8,6 +8,7 @@ TagManager:
   - Boundary
   - Hazard
   - PickUp
+  - PickUpSound
   layers:
   - Default
   - TransparentFX

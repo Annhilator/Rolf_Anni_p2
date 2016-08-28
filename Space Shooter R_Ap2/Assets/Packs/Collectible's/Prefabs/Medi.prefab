@@ -15,6 +15,7 @@ GameObject:
   - 114: {fileID: 114000011336491050}
   - 54: {fileID: 54000010923129298}
   - 114: {fileID: 114000010890045766}
+  - 114: {fileID: 114000010690353426}
   m_Layer: 0
   m_Name: Medi
   m_TagString: PickUp
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 129756}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -126,6 +127,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.33478466, y: 0.2556897, z: 0.09504977}
   m_Center: {x: 0, y: 0, z: -0.0000000018626451}
+--- !u!114 &114000010690353426
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f53108fa98a5ab34ca1559f46741e6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buff: 
+  pickUpSound: {fileID: 82000013001123648, guid: d56711a156e29324b96844ddf3794beb,
+    type: 2}
 --- !u!114 &114000010890045766
 MonoBehaviour:
   m_ObjectHideFlags: 1
