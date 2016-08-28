@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3347994}
   - 23: {fileID: 2302604}
   - 95: {fileID: 9578710}
+  - 136: {fileID: 136000013050433324}
   m_Layer: 0
   m_Name: Pill
   m_TagString: Untagged
@@ -95,3 +96,16 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 133292}
   m_IsPrefabParent: 1
+--- !u!136 &136000013050433324
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133292}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.07734356
+  m_Height: 0.32718676
+  m_Direction: 1
+  m_Center: {x: 0.000000022351742, y: 0, z: 0}

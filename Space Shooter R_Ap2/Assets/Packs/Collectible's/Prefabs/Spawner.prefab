@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3379590}
   - 23: {fileID: 2342386}
   - 95: {fileID: 9511384}
+  - 65: {fileID: 65000011004776998}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -95,3 +96,15 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100302}
   m_IsPrefabParent: 1
+--- !u!65 &65000011004776998
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100302}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.41493097, y: 0.116833374, z: 0.41493097}
+  m_Center: {x: 0, y: 0.0000000055879354, z: 0}

@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3363648}
   - 23: {fileID: 2391070}
   - 95: {fileID: 9590932}
+  - 136: {fileID: 136000010391453266}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
@@ -96,3 +97,16 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 131672}
   m_IsPrefabParent: 1
+--- !u!136 &136000010391453266
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 131672}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.13635671
+  m_Height: 0.30830032
+  m_Direction: 1
+  m_Center: {x: -0.000000052154064, y: -0.000000022351742, z: 0}

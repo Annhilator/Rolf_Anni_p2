@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3339594}
   - 23: {fileID: 2345786}
   - 95: {fileID: 9583806}
+  - 65: {fileID: 65000010994919230}
   m_Layer: 0
   m_Name: Card02
   m_TagString: Untagged
@@ -95,3 +96,15 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 143156}
   m_IsPrefabParent: 1
+--- !u!65 &65000010994919230
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143156}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.17440082, y: 0.27792996, z: 0.026287394}
+  m_Center: {x: 0, y: -0.000000007450581, z: 0}
