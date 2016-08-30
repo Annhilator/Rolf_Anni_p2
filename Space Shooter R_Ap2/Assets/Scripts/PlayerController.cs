@@ -56,33 +56,55 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void FireLaser() {
-		powerUp.laserCount = 4;
 		switch (powerUp.laserCount) {
 		case 1:
+			// 1 straight
 			Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
 			break;
 		case 2:
-			Instantiate (shot, shotSpawn.position + new Vector3(-0.15f, 0.0f, 0.0f), shotSpawn.rotation);
-			Instantiate (shot, shotSpawn.position + new Vector3(0.15f, 0.0f, 0.0f), shotSpawn.rotation);
+			// 2 straight
+			Instantiate (shot, shotSpawn.position + new Vector3(-0.2f, 0.0f, 0.0f), shotSpawn.rotation);
+			Instantiate (shot, shotSpawn.position + new Vector3(0.2f, 0.0f, 0.0f), shotSpawn.rotation);
 			break;
 		case 3: 
-			Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
+			// 1 left, 1 straight, 1 right
+			Instantiate (shot, shotSpawn.position, shotSpawn.rotation); 
 			Instantiate (shot, shotSpawn.position + new Vector3(-0.35f, 0.0f, 0.0f),  Quaternion.Euler(0, -45, 0));
 			Instantiate (shot, shotSpawn.position + new Vector3(0.35f, 0.0f, 0.0f), Quaternion.Euler(0, 45, 0));
 			break;
 		case 4:
-			Instantiate (shot, shotSpawn.position + new Vector3(-0.15f, 0.0f, 0.0f), shotSpawn.rotation);
-			Instantiate (shot, shotSpawn.position + new Vector3(0.15f, 0.0f, 0.0f), shotSpawn.rotation);
+			// 1 left, 2 straight, 1 right
+			Instantiate (shot, shotSpawn.position + new Vector3(-0.2f, 0.0f, 0.0f), shotSpawn.rotation);
+			Instantiate (shot, shotSpawn.position + new Vector3(0.2f, 0.0f, 0.0f), shotSpawn.rotation);
 			Instantiate (shot, shotSpawn.position + new Vector3(-0.35f, 0.0f, 0.0f),  Quaternion.Euler(0, -45, 0));
 			Instantiate (shot, shotSpawn.position + new Vector3(0.35f, 0.0f, 0.0f), Quaternion.Euler(0, 45, 0));
 			break;
 		case 5:
+			// 1 left, 3 straight, 1 right
+			Instantiate (shot, shotSpawn.position + new Vector3(-0.4f, 0.0f, 0.0f), shotSpawn.rotation);
+			Instantiate (shot, shotSpawn.position + new Vector3(0f, 0.0f, 0.0f), shotSpawn.rotation);
+			Instantiate (shot, shotSpawn.position + new Vector3(0.4f, 0.0f, 0.0f), shotSpawn.rotation);
+			Instantiate (shot, shotSpawn.position + new Vector3(-0.35f, 0.0f, 0.0f),  Quaternion.Euler(0, -45, 0));
+			Instantiate (shot, shotSpawn.position + new Vector3(0.35f, 0.0f, 0.0f), Quaternion.Euler(0, 45, 0));
 			break;
 		case 6:
-			break;
-		case 7:
+			// 2 left, 2 straight, 2 right
+			Instantiate (shot, shotSpawn.position + new Vector3(-0.2f, 0.0f, 0.0f), shotSpawn.rotation);
+			Instantiate (shot, shotSpawn.position + new Vector3(0.2f, 0.0f, 0.0f), shotSpawn.rotation);
+			Instantiate (shot, shotSpawn.position + new Vector3(-0.2f, 0.0f, 0.15f),  Quaternion.Euler(0, -45, 0));
+			Instantiate (shot, shotSpawn.position + new Vector3(-0.5f, -0.0f, -0.15f),  Quaternion.Euler(0, -45, 0));
+			Instantiate (shot, shotSpawn.position + new Vector3(0.2f, 0.0f, 0.15f), Quaternion.Euler(0, 45, 0));
+			Instantiate (shot, shotSpawn.position + new Vector3(0.5f, 0.0f, -0.15f), Quaternion.Euler(0, 45, 0));
 			break;
 		default:
+			// 2 left, 3 straight, 2 right
+			Instantiate (shot, shotSpawn.position + new Vector3(-0.4f, 0.0f, 0.0f), shotSpawn.rotation);
+			Instantiate (shot, shotSpawn.position + new Vector3(0f, 0.0f, 0.0f), shotSpawn.rotation);
+			Instantiate (shot, shotSpawn.position + new Vector3(0.4f, 0.0f, 0.0f), shotSpawn.rotation);
+			Instantiate (shot, shotSpawn.position + new Vector3(-0.2f, 0.0f, 0.15f),  Quaternion.Euler(0, -45, 0));
+			Instantiate (shot, shotSpawn.position + new Vector3(-0.5f, -0.0f, -0.15f),  Quaternion.Euler(0, -45, 0));
+			Instantiate (shot, shotSpawn.position + new Vector3(0.2f, 0.0f, 0.15f), Quaternion.Euler(0, 45, 0));
+			Instantiate (shot, shotSpawn.position + new Vector3(0.5f, 0.0f, -0.15f), Quaternion.Euler(0, 45, 0));
 			break;
 		}
 	}

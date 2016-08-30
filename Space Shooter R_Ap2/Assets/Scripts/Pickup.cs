@@ -9,7 +9,8 @@ public class Pickup : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		if (other.CompareTag ("Player")) {
 			Instantiate (pickUpSound, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
-			buff = "Red";
+			PlayerController playerController =  other.gameObject.GetComponent<PlayerController> ();
+			playerController.powerUp.laserCount++;
 			Destroy (gameObject);
 		}
 	}

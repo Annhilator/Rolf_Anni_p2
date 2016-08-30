@@ -9,6 +9,8 @@ public class GameController : MonoBehaviour {
 
 	public Vector3 spawnValues;
 	private int hazardCount;
+	private float hazardSpeed;
+
 	public float spawnWait;
 	public float startWait;
 	public float waveWait;
@@ -26,6 +28,7 @@ public class GameController : MonoBehaviour {
 
 	void Start() {
 		hazardCount = 10;
+		hazardSpeed = 0.0f;
 		gameOver = false;
 		restart = false;
 		restartText.text = "";
@@ -70,8 +73,12 @@ public class GameController : MonoBehaviour {
 				GameObject hazard = hazards [Random.Range(0, hazards.Length)];
 				Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
 				Quaternion spawnRotation = Quaternion.identity;
-				Instantiate (hazard, spawnPosition, spawnRotation);
+				GameObject spawnedHazard = Instantiate (hazard, spawnPosition, spawnRotation) as GameObject;
+				spawnedHazard.GetComponent<Mover> ().speed *= 1 + hazardSpeed;
 				yield return new WaitForSeconds (spawnWait);
+			}
+			if (hazardSpeed < 3.0f) {
+				hazardSpeed += 0.1f;
 			}
 			yield return new WaitForSeconds (waveWait);
 

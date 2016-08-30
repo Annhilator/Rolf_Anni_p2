@@ -2677,7 +2677,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1160023640}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -3109,7 +3109,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  speedModifier: 0
   tilt: 4
   boundary:
     xMin: -6
@@ -3117,6 +3116,8 @@ MonoBehaviour:
     zMin: -4
     zMax: 8
   shot: {fileID: 1000011553327020, guid: 21d6d1b471130b445b18fedb4daa67e7, type: 2}
+  shotLeft: {fileID: 1000012133301902, guid: 835256d0103b71d45a60762f465e146e, type: 2}
+  shotRight: {fileID: 1000012133301902, guid: 426f43455c195e44396bf232fd71a7db, type: 2}
   shotSpawn: {fileID: 161419864}
   fireRate: 0.25
 --- !u!1 &2126847885
