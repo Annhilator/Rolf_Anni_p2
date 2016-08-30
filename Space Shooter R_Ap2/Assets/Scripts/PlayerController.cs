@@ -5,27 +5,36 @@ using System.Collections;
 public class Boundary {
 	public float xMin, xMax, zMin, zMax;
 }
+	
+public class PowerUp {
+	public int laserCount;
+	public float speedModifier;
+}
 
 public class PlayerController : MonoBehaviour {
 
 	public float speed;
-	public float speedModifier;
 	public float tilt;
 	public Boundary boundary;
+	public PowerUp powerUp;
 
 	public GameObject shot;
+	public GameObject shotLeft;
+	public GameObject shotRight;
 	public Transform shotSpawn;
 	public float fireRate;
 	private float nextFire;
 
 	void Start () {
-		speedModifier = 1.0f;
+		powerUp = new PowerUp();
+		powerUp.speedModifier = 1.0f;
+		powerUp.laserCount = 1;
 	}
 
 	void Update() {
 		if ((Input.GetButton ("Fire1") || Input.GetButton ("Jump")) && Time.time > nextFire) {
 			nextFire = Time.time + fireRate;
-			Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
+			FireLaser ();
 			GetComponent<AudioSource> () .Play();
 		}
 
@@ -44,5 +53,37 @@ public class PlayerController : MonoBehaviour {
 			Mathf.Clamp (GetComponent<Rigidbody> ().position.z, boundary.zMin, boundary.zMax));
 
 		GetComponent<Rigidbody> ().rotation = Quaternion.Euler (0.0f, 0.0f, -GetComponent<Rigidbody> ().velocity.x * tilt);
+	}
+
+	void FireLaser() {
+		powerUp.laserCount = 4;
+		switch (powerUp.laserCount) {
+		case 1:
+			Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
+			break;
+		case 2:
+			Instantiate (shot, shotSpawn.position + new Vector3(-0.15f, 0.0f, 0.0f), shotSpawn.rotation);
+			Instantiate (shot, shotSpawn.position + new Vector3(0.15f, 0.0f, 0.0f), shotSpawn.rotation);
+			break;
+		case 3: 
+			Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
+			Instantiate (shot, shotSpawn.position + new Vector3(-0.35f, 0.0f, 0.0f),  Quaternion.Euler(0, -45, 0));
+			Instantiate (shot, shotSpawn.position + new Vector3(0.35f, 0.0f, 0.0f), Quaternion.Euler(0, 45, 0));
+			break;
+		case 4:
+			Instantiate (shot, shotSpawn.position + new Vector3(-0.15f, 0.0f, 0.0f), shotSpawn.rotation);
+			Instantiate (shot, shotSpawn.position + new Vector3(0.15f, 0.0f, 0.0f), shotSpawn.rotation);
+			Instantiate (shot, shotSpawn.position + new Vector3(-0.35f, 0.0f, 0.0f),  Quaternion.Euler(0, -45, 0));
+			Instantiate (shot, shotSpawn.position + new Vector3(0.35f, 0.0f, 0.0f), Quaternion.Euler(0, 45, 0));
+			break;
+		case 5:
+			break;
+		case 6:
+			break;
+		case 7:
+			break;
+		default:
+			break;
+		}
 	}
 }
