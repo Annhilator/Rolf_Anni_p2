@@ -58,37 +58,63 @@ public class PlayerController : MonoBehaviour {
 	void FireLaser() {
 		switch (powerUp.laserCount) {
 		case 1:
-			// 1 straight
+			// 0 1 0
 			Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
 			break;
 		case 2:
-			// 2 straight
+			// 0 2 0
 			Instantiate (shot, shotSpawn.position + new Vector3(-0.2f, 0.0f, 0.0f), shotSpawn.rotation);
 			Instantiate (shot, shotSpawn.position + new Vector3(0.2f, 0.0f, 0.0f), shotSpawn.rotation);
 			break;
 		case 3: 
-			// 1 left, 1 straight, 1 right
+			// 0 3 0
+			Instantiate (shot, shotSpawn.position + new Vector3(-0.4f, 0.0f, 0.0f), shotSpawn.rotation);
+			Instantiate (shot, shotSpawn.position + new Vector3(0f, 0.0f, 0.0f), shotSpawn.rotation);
+			Instantiate (shot, shotSpawn.position + new Vector3(0.4f, 0.0f, 0.0f), shotSpawn.rotation);
+			break;
+		case 4:
+			// 1 0 1
+			Instantiate (shot, shotSpawn.position + new Vector3(-0.35f, 0.0f, 0.0f),  Quaternion.Euler(0, -45, 0));
+			Instantiate (shot, shotSpawn.position + new Vector3(0.35f, 0.0f, 0.0f), Quaternion.Euler(0, 45, 0));
+			break;
+		case 5:
+			// 1 1 1
 			Instantiate (shot, shotSpawn.position, shotSpawn.rotation); 
 			Instantiate (shot, shotSpawn.position + new Vector3(-0.35f, 0.0f, 0.0f),  Quaternion.Euler(0, -45, 0));
 			Instantiate (shot, shotSpawn.position + new Vector3(0.35f, 0.0f, 0.0f), Quaternion.Euler(0, 45, 0));
 			break;
-		case 4:
-			// 1 left, 2 straight, 1 right
+		case 6:
+			// 1 2 1
 			Instantiate (shot, shotSpawn.position + new Vector3(-0.2f, 0.0f, 0.0f), shotSpawn.rotation);
 			Instantiate (shot, shotSpawn.position + new Vector3(0.2f, 0.0f, 0.0f), shotSpawn.rotation);
 			Instantiate (shot, shotSpawn.position + new Vector3(-0.35f, 0.0f, 0.0f),  Quaternion.Euler(0, -45, 0));
 			Instantiate (shot, shotSpawn.position + new Vector3(0.35f, 0.0f, 0.0f), Quaternion.Euler(0, 45, 0));
 			break;
-		case 5:
-			// 1 left, 3 straight, 1 right
+		case 7:
+			// 1 3 1
 			Instantiate (shot, shotSpawn.position + new Vector3(-0.4f, 0.0f, 0.0f), shotSpawn.rotation);
 			Instantiate (shot, shotSpawn.position + new Vector3(0f, 0.0f, 0.0f), shotSpawn.rotation);
 			Instantiate (shot, shotSpawn.position + new Vector3(0.4f, 0.0f, 0.0f), shotSpawn.rotation);
 			Instantiate (shot, shotSpawn.position + new Vector3(-0.35f, 0.0f, 0.0f),  Quaternion.Euler(0, -45, 0));
 			Instantiate (shot, shotSpawn.position + new Vector3(0.35f, 0.0f, 0.0f), Quaternion.Euler(0, 45, 0));
 			break;
-		case 6:
-			// 2 left, 2 straight, 2 right
+		case 8:
+			// 2 0 2
+			Instantiate (shot, shotSpawn.position + new Vector3(-0.2f, 0.0f, 0.15f),  Quaternion.Euler(0, -45, 0));
+			Instantiate (shot, shotSpawn.position + new Vector3(-0.5f, -0.0f, -0.15f),  Quaternion.Euler(0, -45, 0));
+			Instantiate (shot, shotSpawn.position + new Vector3(0.2f, 0.0f, 0.15f), Quaternion.Euler(0, 45, 0));
+			Instantiate (shot, shotSpawn.position + new Vector3(0.5f, 0.0f, -0.15f), Quaternion.Euler(0, 45, 0));
+			break;
+		case 9:
+			// 2 1 2
+			Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
+			Instantiate (shot, shotSpawn.position + new Vector3(-0.2f, 0.0f, 0.15f),  Quaternion.Euler(0, -45, 0));
+			Instantiate (shot, shotSpawn.position + new Vector3(-0.5f, -0.0f, -0.15f),  Quaternion.Euler(0, -45, 0));
+			Instantiate (shot, shotSpawn.position + new Vector3(0.2f, 0.0f, 0.15f), Quaternion.Euler(0, 45, 0));
+			Instantiate (shot, shotSpawn.position + new Vector3(0.5f, 0.0f, -0.15f), Quaternion.Euler(0, 45, 0));
+			break;
+		case 10:
+			// 2 2 2
 			Instantiate (shot, shotSpawn.position + new Vector3(-0.2f, 0.0f, 0.0f), shotSpawn.rotation);
 			Instantiate (shot, shotSpawn.position + new Vector3(0.2f, 0.0f, 0.0f), shotSpawn.rotation);
 			Instantiate (shot, shotSpawn.position + new Vector3(-0.2f, 0.0f, 0.15f),  Quaternion.Euler(0, -45, 0));
@@ -97,7 +123,7 @@ public class PlayerController : MonoBehaviour {
 			Instantiate (shot, shotSpawn.position + new Vector3(0.5f, 0.0f, -0.15f), Quaternion.Euler(0, 45, 0));
 			break;
 		default:
-			// 2 left, 3 straight, 2 right
+			// 2 3 2
 			Instantiate (shot, shotSpawn.position + new Vector3(-0.4f, 0.0f, 0.0f), shotSpawn.rotation);
 			Instantiate (shot, shotSpawn.position + new Vector3(0f, 0.0f, 0.0f), shotSpawn.rotation);
 			Instantiate (shot, shotSpawn.position + new Vector3(0.4f, 0.0f, 0.0f), shotSpawn.rotation);

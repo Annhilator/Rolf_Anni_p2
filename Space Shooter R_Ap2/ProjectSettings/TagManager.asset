@@ -9,6 +9,7 @@ TagManager:
   - Hazard
   - PickUp
   - PickUpSound
+  - Enemy
   layers:
   - Default
   - TransparentFX

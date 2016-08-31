@@ -2485,6 +2485,7 @@ MonoBehaviour:
   - {fileID: 1000010773314068, guid: 59cd269b99126f641a29c69a0fc39244, type: 2}
   - {fileID: 1000011467496336, guid: f67c6e49cd55fc347ad711627f6d0a1b, type: 2}
   - {fileID: 1000014206925966, guid: 4a0fd75cd873c334a90cc63b93cff3c8, type: 2}
+  - {fileID: 1000010564511174, guid: f58b18e3547a388409e3a50db8f427e3, type: 2}
   pickUps:
   - {fileID: 133292, guid: d2be0d31fcb0e19449dd735dd1bc93c4, type: 2}
   - {fileID: 195526, guid: 335cc041d52406b43ace028676883483, type: 2}
@@ -3200,7 +3201,7 @@ MonoBehaviour:
   shotLeft: {fileID: 1000012133301902, guid: 835256d0103b71d45a60762f465e146e, type: 2}
   shotRight: {fileID: 1000012133301902, guid: 426f43455c195e44396bf232fd71a7db, type: 2}
   shotSpawn: {fileID: 161419864}
-  fireRate: 0.125
+  fireRate: 0.25
 --- !u!1 &2126847885
 GameObject:
   m_ObjectHideFlags: 0
