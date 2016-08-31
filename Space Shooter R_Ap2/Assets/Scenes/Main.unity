@@ -2505,7 +2505,7 @@ MonoBehaviour:
   - {fileID: 140194, guid: f327c81e53d3c3f4aa7afdf3b6b11480, type: 2}
   - {fileID: 100302, guid: 050a915e007e54248b61183e7f3a2ae7, type: 2}
   spawnValues: {x: 6, y: 0, z: 16}
-  spawnWait: 0.5
+  spawnWait: 0.35
   startWait: 1
   waveWait: 4
   scoreText: {fileID: 513911065}

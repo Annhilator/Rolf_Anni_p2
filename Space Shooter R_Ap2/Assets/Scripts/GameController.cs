@@ -78,12 +78,12 @@ public class GameController : MonoBehaviour {
 				yield return new WaitForSeconds (spawnWait);
 			}
 			if (hazardSpeed < 3.0f) {
-				hazardSpeed += 0.1f;
+				hazardSpeed += 0.2f;
 			}
 			yield return new WaitForSeconds (waveWait);
 
 			if (hazardCount <= 30) {
-				hazardCount++;
+				hazardCount += 2;
 			}
 
 			if (gameOver) {
