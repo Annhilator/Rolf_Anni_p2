@@ -2487,27 +2487,16 @@ MonoBehaviour:
   - {fileID: 1000014206925966, guid: 4a0fd75cd873c334a90cc63b93cff3c8, type: 2}
   - {fileID: 1000010564511174, guid: f58b18e3547a388409e3a50db8f427e3, type: 2}
   pickUps:
-  - {fileID: 133292, guid: d2be0d31fcb0e19449dd735dd1bc93c4, type: 2}
-  - {fileID: 195526, guid: 335cc041d52406b43ace028676883483, type: 2}
-  - {fileID: 179972, guid: 096cbac307ca54e468f92aac2b2072ba, type: 2}
   - {fileID: 131672, guid: 39324ec4b1af4cf46bbfc092dcc1c8ab, type: 2}
-  - {fileID: 143156, guid: 25f696e554aaf7e4b9fc2588b12cbec2, type: 2}
-  - {fileID: 102106, guid: e5a246264d6b648428589ab5e2131359, type: 2}
-  - {fileID: 164182, guid: c553caa656c587944a6944b137da5df3, type: 2}
-  - {fileID: 131432, guid: 35ba7927cc620184ea592ec83e19409d, type: 2}
-  - {fileID: 170972, guid: 02745137add21ee47b9ddf34f4f2e527, type: 2}
-  - {fileID: 167258, guid: 794476b8446db6e41b69cf786ab5e372, type: 2}
-  - {fileID: 107736, guid: f417fc1aab1b5524282f4cab3ab45b12, type: 2}
-  - {fileID: 123876, guid: 118b028ab4722dd47b5435fe68c7969b, type: 2}
-  - {fileID: 129756, guid: 464a4a3b839d8c442aa74d34bbdc53d8, type: 2}
-  - {fileID: 184308, guid: 8c998bfbe499a074a8b05a038e54108b, type: 2}
-  - {fileID: 173476, guid: 6870639d63391df4986653a3c65d2e50, type: 2}
-  - {fileID: 140194, guid: f327c81e53d3c3f4aa7afdf3b6b11480, type: 2}
-  - {fileID: 100302, guid: 050a915e007e54248b61183e7f3a2ae7, type: 2}
+  - {fileID: 133292, guid: d2be0d31fcb0e19449dd735dd1bc93c4, type: 2}
   spawnValues: {x: 6, y: 0, z: 16}
+  hazardSpeed: 3
+  hazardSpeedModifier: 0.2
   spawnWait: 0.35
   startWait: 1
-  waveWait: 4
+  waveWait: 5
+  maxHazardSpeed: 20
+  maxHazardCount: 30
   scoreText: {fileID: 513911065}
   restartText: {fileID: 263632855}
   gameOverText: {fileID: 265808742}
@@ -3197,11 +3186,15 @@ MonoBehaviour:
     xMax: 6
     zMin: -4
     zMax: 8
+  powerUp:
+    laserCount: 0
+    speedModifier: 0
+    fireRate: 0
   shot: {fileID: 1000011553327020, guid: 21d6d1b471130b445b18fedb4daa67e7, type: 2}
   shotLeft: {fileID: 1000012133301902, guid: 835256d0103b71d45a60762f465e146e, type: 2}
   shotRight: {fileID: 1000012133301902, guid: 426f43455c195e44396bf232fd71a7db, type: 2}
   shotSpawn: {fileID: 161419864}
-  fireRate: 0.25
+  startFireRate: 0.4
 --- !u!1 &2126847885
 GameObject:
   m_ObjectHideFlags: 0

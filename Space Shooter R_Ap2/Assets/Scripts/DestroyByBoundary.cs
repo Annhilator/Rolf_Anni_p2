@@ -10,6 +10,11 @@ public class DestroyByBoundary : MonoBehaviour {
 		if (other.CompareTag ("Hazard")) {
 			GameController.FindGameController ().AddScore (-hazardPenalty);
 		}
+
+		if (other.name == "Enemy Ship(Clone)") {
+			GameController.FindGameController ().AddScore (-hazardPenalty);
+		}
+
 		Destroy(other.gameObject);
 	}
 }

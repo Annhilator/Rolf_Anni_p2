@@ -5,10 +5,12 @@ using System.Collections;
 public class Boundary {
 	public float xMin, xMax, zMin, zMax;
 }
-	
+
+[System.Serializable]
 public class PowerUp {
 	public int laserCount;
 	public float speedModifier;
+	public float fireRate;
 }
 
 public class PlayerController : MonoBehaviour {
@@ -22,18 +24,20 @@ public class PlayerController : MonoBehaviour {
 	public GameObject shotLeft;
 	public GameObject shotRight;
 	public Transform shotSpawn;
-	public float fireRate;
+
+	public float startFireRate;
 	private float nextFire;
 
 	void Start () {
 		powerUp = new PowerUp();
 		powerUp.speedModifier = 1.0f;
 		powerUp.laserCount = 1;
+		powerUp.fireRate = startFireRate;
 	}
 
 	void Update() {
 		if ((Input.GetButton ("Fire1") || Input.GetButton ("Jump")) && Time.time > nextFire) {
-			nextFire = Time.time + fireRate;
+			nextFire = Time.time + powerUp.fireRate;
 			FireLaser ();
 			GetComponent<AudioSource> () .Play();
 		}
