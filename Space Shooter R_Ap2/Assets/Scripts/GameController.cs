@@ -9,15 +9,13 @@ public class GameController : MonoBehaviour {
 
 	public Vector3 spawnValues;
 	public float hazardSpeed;
-	private int hazardCount;
+	public int hazardCount;
 	public float hazardSpeedModifier;
-
+	public float maxHazardSpeed;
+	public float maxHazardCount;
 	public float spawnWait;
 	public float startWait;
 	public float waveWait;
-
-	public float maxHazardSpeed;
-	public float maxHazardCount;
 
 	public GUIText scoreText;
 	public GUIText restartText;
@@ -32,7 +30,6 @@ public class GameController : MonoBehaviour {
 	private GameObject startScreen;
 
 	void Start() {
-		hazardCount = 10;
 		gameOver = false;
 		restart = false;
 		restartText.text = "";

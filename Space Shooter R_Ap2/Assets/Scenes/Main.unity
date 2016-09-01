@@ -2490,13 +2490,14 @@ MonoBehaviour:
   - {fileID: 131672, guid: 39324ec4b1af4cf46bbfc092dcc1c8ab, type: 2}
   - {fileID: 133292, guid: d2be0d31fcb0e19449dd735dd1bc93c4, type: 2}
   spawnValues: {x: 6, y: 0, z: 16}
-  hazardSpeed: 3
+  hazardSpeed: 3.5
+  hazardCount: 10
   hazardSpeedModifier: 0.2
-  spawnWait: 0.35
-  startWait: 1
-  waveWait: 5
   maxHazardSpeed: 20
   maxHazardCount: 30
+  spawnWait: 0.4
+  startWait: 1
+  waveWait: 5
   scoreText: {fileID: 513911065}
   restartText: {fileID: 263632855}
   gameOverText: {fileID: 265808742}
