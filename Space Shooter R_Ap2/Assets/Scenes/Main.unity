@@ -2496,7 +2496,7 @@ MonoBehaviour:
   maxHazardSpeed: 20
   maxHazardCount: 30
   spawnWait: 0.4
-  startWait: 1
+  startWait: 2.5
   waveWait: 5
   scoreText: {fileID: 513911065}
   restartText: {fileID: 263632855}
@@ -2749,7 +2749,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1160023640}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -2803,7 +2803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5516cd77adcdab84ea5b63342546b829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 1
+  lifeTime: 5
 --- !u!1 &1474564408
 GameObject:
   m_ObjectHideFlags: 0
